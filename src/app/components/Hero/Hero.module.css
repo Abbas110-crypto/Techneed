@@ -1,0 +1,520 @@
+.main{
+    margin-top: 10%;
+    display: inline-block;
+    margin-left: 10%;
+}
+.hd1{
+    font-size: 75px;
+    font-weight: 300;
+    color: var(--secondary);
+    font-family: 'Clash Display', sans-serif;
+}
+.p2{
+    display: inline-block;
+    margin-left: 10%;
+}
+.hd2{
+    color: var(--secondary);
+    padding-right: 20px;
+    font-size: 75px;
+    font-weight: 300;
+    font-family: 'Clash Display', sans-serif;
+}
+.hd3{
+    color: var(--secondary);
+    padding-right: 20px;
+    font-size: 75px;
+    font-weight: 700;
+    font-family: 'Clash Display', sans-serif;
+    text-shadow: -1px -1px 0 #000,  
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;
+}
+.hd4{
+    padding-left: 20px;
+    font-size: 80px;
+    font-weight: 700;
+    color:var(--secondary);
+    font-family: 'Clash Display', sans-serif;
+    text-shadow: -1px -1px 0 #000,  
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;
+}
+.hd5{
+    padding-right: 20px;
+    font-size: 80px;
+    font-weight: 700;
+    color: var(--secondary);
+    font-family: 'Clash Display', sans-serif;
+    text-shadow: -1px -1px 0 #000,  
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;
+}
+.paragraph{
+    margin-top: 2%;
+    font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--secondary);
+    padding-right: 5%;
+}
+.p3{
+    display: inline-block;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+.Button{
+    background-color: var(--secondary);
+    align-items: center;
+    text-align: center;
+    align-content: flex-start;
+    align-items: flex-start;
+    border-radius: 100px;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 10px 24px;
+    position: relative;
+    text-decoration: none;
+    width: min-content;
+    font-size: 15px;
+    font-weight: 700;
+}
+.srvc_heading{
+    font-family: "Clash Display", sans-serif;
+    font-weight: 300;
+    font-size: 88px;
+    letter-spacing: -0.03em;
+    line-height: 1.1em;
+    color: var(--secondary);
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.CustomRow{
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+.slider{
+    overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0,0,0,0));
+  box-shadow: inset rgb(183 109 109 / 10%) 8px 2px 3px 0px, inset rgba(0, 0, 0, 0.06);
+}
+
+.ImageSlider{
+    margin-right: 20px;
+    border-radius: 20px;
+    border: solid 1px #fff;
+}
+.CompanySlider{
+    border-top: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    width: 100%; 
+
+}
+.CompanyItem{
+    margin: 15%;
+    display: inline-block;
+}
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+.mobileicon{
+    display: none;
+}
+
+@media (min-width:370px) and (max-width:500px){
+    .main{
+        margin-top: 30%;
+        display: inline-block;
+        margin-left: 3%;
+    }
+    .mobileicon{
+        margin-left: 3%;
+        margin-right: 0;
+    }
+    .hd1{
+        font-size: 30px;
+        font-weight: 300;
+        color: var(--secondary);
+        font-family: 'Clash Display', sans-serif;
+    }
+    .p2{
+        display: inline-block;
+        margin-left: 3%;
+    }
+    .hd2{
+        color: var(--secondary);
+        font-size: 30px;
+        font-weight: 300;
+        font-family: 'Clash Display', sans-serif;
+        margin-right: 0;
+        margin-left: 3%;
+    }
+    .hd3{
+        color: var(--secondary);
+        padding-right: 20px;
+        font-size: 30px;
+        font-weight: 700;
+        font-family: 'Clash Display', sans-serif;
+        text-shadow: -1px -1px 0 #000,  
+                    1px -1px 0 #000,
+                    -1px 1px 0 #000,
+                    1px 1px 0 #000;
+    }
+    .hd4{
+        padding-left: 20px;
+        font-size: 80px;
+        font-weight: 700;
+        color:var(--secondary);
+        font-family: 'Clash Display', sans-serif;
+        text-shadow: -1px -1px 0 #000,  
+                    1px -1px 0 #000,
+                    -1px 1px 0 #000,
+                    1px 1px 0 #000;
+    }
+    .hd5{
+        padding-right: 20px;
+        font-size: 80px;
+        font-weight: 700;
+        color: var(--secondary);
+        font-family: 'Clash Display', sans-serif;
+        text-shadow: -1px -1px 0 #000,  
+                    1px -1px 0 #000,
+                    -1px 1px 0 #000,
+                    1px 1px 0 #000;
+    }
+    .srvc_heading{
+        margin-top: 5%;
+        margin-left: 5%;
+        font-family: "Clash Display", sans-serif;
+        font-weight: 300;
+        font-size: 40px;
+        letter-spacing: -0.03em;
+        line-height: 1.1em;
+        color: var(--secondary);
+    }
+    .paragraph{
+        margin-top: 2%;
+        font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        color: var(--secondary);
+    }
+    .p3{
+        display: inline-block;
+        margin-left: 10%;
+        margin-top: 2%;
+    }
+    .Button{
+        background-color: var(--secondary);
+        align-items: center;
+        text-align: center;
+        align-content: flex-start;
+        align-items: flex-start;
+        border-radius: 100px;
+        display: flex;
+        flex: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: min-content;
+        justify-content: flex-start;
+        overflow: visible;
+        padding: 8px 20px;
+        position: relative;
+        text-decoration: none;
+        width: min-content;
+        font-size: 15px;
+        font-weight: 700;
+        margin-top: 3%;
+        
+    }
+    .icon{
+        display: none;
+    }
+    .CustomRow{
+        margin-top: 10%;
+        margin-bottom: 7%;
+    }
+    .slider{
+        overflow: hidden;
+      position: relative;
+      mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0));
+      box-shadow: inset rgb(183 109 109 / 10%) 8px 2px 3px 0px, inset rgba(0, 0, 0, 0.06);
+    }
+    
+    .ImageSlider{
+        margin-right: 20px;
+        border-radius: 20px;
+        border: solid 1px #fff;
+    }
+    .CompanySlider{
+        border-top: solid 1px #fff;
+        border-bottom: solid 1px #fff;
+    }
+    .CompanyItem{
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+    .mobileicon{
+        display: inline;
+    }   
+}
+@media (min-width:500px) and (max-width:850px){
+    .main{
+        margin-top: 15%;
+        display: inline-block;
+        margin-left: 5%;
+    }
+    .mobileicon{
+        margin-left: 5%;
+        margin-right: 0;
+    }
+    .hd1{
+        font-size: 50px;
+        font-weight: 300;
+        color: var(--secondary);
+        font-family: 'Clash Display', sans-serif;
+    }
+    .p2{
+        display: inline-block;
+        margin-left: 3%;
+    }
+    .hd2{
+        color: var(--secondary);
+        font-size: 50px;
+        font-weight: 300;
+        font-family: 'Clash Display', sans-serif;
+        margin-right: 0;
+        margin-left: 3%;
+    }
+    .hd3{
+        color: var(--secondary);
+        padding-right: 20px;
+        font-size: 50px;
+        font-weight: 700;
+        font-family: 'Clash Display', sans-serif;
+        text-shadow: -1px -1px 0 #000,  
+                    1px -1px 0 #000,
+                    -1px 1px 0 #000,
+                    1px 1px 0 #000;
+    }
+    
+    .hd5{
+        padding-right: 20px;
+        font-size: 80px;
+        font-weight: 700;
+        color: var(--secondary);
+        font-family: 'Clash Display', sans-serif;
+        text-shadow: -1px -1px 0 #000,  
+                    1px -1px 0 #000,
+                    -1px 1px 0 #000,
+                    1px 1px 0 #000;
+    }
+    .srvc_heading{
+        margin-top: 5%;
+        margin-left: 5%;
+        font-family: "Clash Display", sans-serif;
+        font-weight: 300;
+        font-size: 50px;
+        letter-spacing: -0.03em;
+        line-height: 1.1em;
+        color: var(--secondary);
+    }
+    .paragraph{
+        margin: 2%;
+        font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        color: var(--secondary);
+    }
+    .p3{
+        display: inline-block;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+    .Button{
+        background-color: var(--secondary);
+        align-items: center;
+        text-align: center;
+        align-content: flex-start;
+        align-items: flex-start;
+        border-radius: 100px;
+        display: flex;
+        flex: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: min-content;
+        justify-content: flex-start;
+        overflow: visible;
+        padding: 8px 20px;
+        position: relative;
+        text-decoration: none;
+        width: min-content;
+        font-size: 15px;
+        font-weight: 700;
+        margin-top: 3%;
+        
+    }
+    .icon{
+        display: none;
+    }
+    .CustomRow{
+        margin-top: 10%;
+        margin-bottom: 7%;
+    }
+    .slider{
+        overflow: hidden;
+      position: relative;
+      mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0));
+      box-shadow: inset rgb(183 109 109 / 10%) 8px 2px 3px 0px, inset rgba(0, 0, 0, 0.06);
+    }
+    
+    .ImageSlider{
+        margin-right: 20px;
+        border-radius: 20px;
+        border: solid 1px #fff;
+    }
+    .CompanySlider{
+        border-top: solid 1px #fff;
+        border-bottom: solid 1px #fff;
+    }
+    .CompanyItem{
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+    .mobileicon{
+        display: inline;
+    }   
+}
+
+@media (min-width:850px) and (max-width:1100px){
+    .main{
+        margin-top: 15%;
+        display: inline-block;
+        margin-left: 5%;
+    }
+    .mobileicon{
+        display: none!important;
+    }
+    .hd1{
+        font-size: 60px;
+        font-weight: 300;
+        color: var(--secondary);
+        font-family: 'Clash Display', sans-serif;
+    }
+    .p2{
+        display: inline-block;
+        margin-left: 3%;
+    }
+    .hd2{
+        color: var(--secondary);
+        font-size: 60px;
+        font-weight: 300;
+        font-family: 'Clash Display', sans-serif;
+        margin-right: 0;
+        margin-left: 3%;
+    }
+    .hd3{
+        color: var(--secondary);
+        padding-right: 20px;
+        font-size: 60px;
+        font-weight: 700;
+        font-family: 'Clash Display', sans-serif;
+        text-shadow: -1px -1px 0 #000,  
+                    1px -1px 0 #000,
+                    -1px 1px 0 #000,
+                    1px 1px 0 #000;
+    }
+    
+    .hd5{
+        padding-right: 20px;
+        font-size: 80px;
+        font-weight: 700;
+        color: var(--secondary);
+        font-family: 'Clash Display', sans-serif;
+        text-shadow: -1px -1px 0 #000,  
+                    1px -1px 0 #000,
+                    -1px 1px 0 #000,
+                    1px 1px 0 #000;
+    }
+    .paragraph{
+        margin: 2%;
+        font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        color: var(--secondary);
+    }
+    .p3{
+        display: inline-block;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+    .Button{
+        background-color: var(--secondary);
+        align-items: center;
+        text-align: center;
+        align-content: flex-start;
+        align-items: flex-start;
+        border-radius: 100px;
+        display: flex;
+        flex: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: min-content;
+        justify-content: flex-start;
+        overflow: visible;
+        padding: 10px 24px;
+        position: relative;
+        text-decoration: none;
+        width: min-content;
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 3%;
+        
+    }
+    .icon{
+        display: inline;
+    }
+    .CustomRow{
+        margin-top: 10%;
+        margin-bottom: 7%;
+    }
+    .slider{
+        overflow: hidden;
+      position: relative;
+      mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0));
+      box-shadow: inset rgb(183 109 109 / 10%) 8px 2px 3px 0px, inset rgba(0, 0, 0, 0.06);
+    }
+    
+    .ImageSlider{
+        margin-right: 20px;
+        border-radius: 20px;
+        border: solid 1px #fff;
+    }
+    .CompanySlider{
+        border-top: solid 1px #fff;
+        border-bottom: solid 1px #fff;
+    }
+    .CompanyItem{
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+    .mobileicon{
+        display: inline;
+    }   
+}

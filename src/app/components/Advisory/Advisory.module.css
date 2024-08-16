@@ -1,0 +1,120 @@
+.main{
+    margin-top: 4%;
+    display: inline-block;
+    margin-left: 10%;
+}
+.heading1{
+    font-family: "Clash Display", sans-serif;
+    font-weight: 300;
+    font-size: 88px;
+    letter-spacing: -0.03em;
+    line-height: 1.1em;
+    color: var(--secondary);
+}
+.paragraph1{
+    font-family: "Satoshi";
+    font-size: 24px;
+    letter-spacing: -0.03em;
+    line-height: 1.5em;
+    color: var(--secondary);
+}
+.heading2{
+    margin-top: 1%;
+    font-family: "Clash Display", sans-serif;
+    font-size: 40px;
+    letter-spacing: -0.03em;
+    line-height: 1.4em;
+    color:var(--secondary);
+    font-weight: 300;
+}
+.paragraph2{
+    font-family: "Satoshi";
+    font-size: 24px;
+    letter-spacing: -0.03em;
+    line-height: 1.5em;
+    color: var(--secondary);
+}
+@media (min-width:250px) and (max-width: 500px){
+    .main{
+        margin-top: 4%;
+        display: inline-block;
+        margin-left: 5%;
+    }
+    .heading1{
+        font-family: "Clash Display", sans-serif;
+        font-weight: 300;
+        font-size: 40px;
+        letter-spacing: -0.03em;
+        line-height: 1.1em;
+        color: var(--secondary);
+    }
+    .paragraph1{
+        font-family: "Satoshi";
+        font-size: 18px;
+        letter-spacing: -0.03em;
+        line-height: 1.5em;
+        color: var(--secondary);
+        padding-right: 40px;
+        padding-bottom: 20px;
+    }
+    .heading2{
+        font-family: "Clash Display", sans-serif;
+        font-size: 30px;
+        letter-spacing: -0.03em;
+        line-height: 1em;
+        color:var(--secondary);
+        font-weight: 300;
+    }
+    .paragraph2{
+        font-family: "Satoshi";
+        font-size: 18px;
+        letter-spacing: -0.03em;
+        line-height: 1.5em;
+        color: var(--secondary);
+        padding-right: 40px;
+        padding-bottom: 20px;
+    
+    }
+}
+@media (min-width:500px) and (max-width: 850px){
+    .main{
+        margin-top: 4%;
+        display: inline-block;
+        margin-left: 5%;
+    }
+    .heading1{
+        font-family: "Clash Display", sans-serif;
+        font-weight: 300;
+        font-size: 50px;
+        letter-spacing: -0.03em;
+        line-height: 1.1em;
+        color: var(--secondary);
+    }
+    .paragraph1{
+        font-family: "Satoshi";
+        font-size: 24px;
+        letter-spacing: -0.03em;
+        line-height: 1.5em;
+        color: var(--secondary);
+        padding-right: 40px;
+        padding-bottom: 20px;
+    }
+    .heading2{
+        font-family: "Clash Display", sans-serif;
+        font-size: 40px;
+        letter-spacing: -0.03em;
+        line-height: 1em;
+        color:var(--secondary);
+        font-weight: 300;
+    }
+    .paragraph2{
+        font-family: "Satoshi";
+        font-size: 24px;
+        letter-spacing: -0.03em;
+        line-height: 1.5em;
+        color: var(--secondary);
+        padding-right: 40px;
+        padding-bottom: 20px;
+    
+    }
+}
