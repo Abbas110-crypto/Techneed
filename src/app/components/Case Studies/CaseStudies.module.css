@@ -1,0 +1,277 @@
+.main{
+    margin-top: 6%;
+    display: inline-block;
+   
+}
+.heading{
+    font-family: "Clash Display", sans-serif;
+    font-size: 88px;
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    line-height: 1.1em;
+    color: var(--secondary);
+    margin-left:5%;
+}
+.callButton {
+    padding: 15px 30px;
+    background-color:var(--secondary);
+    color: var(--primary);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Clash Display', sans-serif;
+   position: relative;
+   top: 10px;
+   left: 150px;
+   font-size: 15px;
+   font-weight: 500;
+  }
+.divider{
+    margin-top: 5%;
+}
+.blog{
+    margin-top: 5%;
+    margin-bottom: 5%; 
+}
+
+.blog_content {
+    border-radius:20px;
+    background: linear-gradient(180deg, rgba(251, 98, 57, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%);
+    width: 415px;
+    height: 500px;
+    background: var(--secondary);
+    cursor: pointer;
+    margin-top: 5%;
+    margin-left: 10px;
+}
+
+.image {
+    margin: 3%;
+    border-radius: 20px;
+
+}
+.desc {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1em;
+    margin-top: 5%;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.Button{
+    margin-left: 3%;
+    background-color: var(--primary);
+    border-radius: 100px;
+    height: min-content;
+    overflow: visible;
+    padding: 8px 23px;
+    text-decoration: none;
+    width: min-content;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Clash Display', sans-serif;
+    color: var(--secondary);
+}
+.Button1{
+    margin: 3%;
+    background-color: var(--secondary);
+    border-radius: 100px;
+    height: min-content;
+    overflow: visible;
+    padding: 8px 23px;
+    text-decoration: none;
+    width: min-content;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: 'Clash Display', sans-serif;
+    color: var(--primary);
+}
+@media (min-width:350px) and (max-width:500px){
+    .main{
+        margin-top: 6%;
+        display: inline-block;
+       
+    }
+    .heading{
+        font-family: "Clash Display", sans-serif;
+        font-size: 40px;
+        font-weight: 300;
+        letter-spacing: -0.03em;
+        line-height: 1.1em;
+        color: var(--secondary);
+        margin-left:5%;
+    }
+    .callButton {
+        display: none;
+        padding: 15px 30px;
+        background-color:var(--secondary);
+        color: var(--primary);
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-family: 'Clash Display', sans-serif;
+       position: relative;
+       top: 10px;
+       left: 50px;
+       font-size: 15px;
+       font-weight: 500;
+      }
+    .divider{
+        margin-top: 5%;
+    }
+    .blog{
+        margin-top: 5%;
+        margin-bottom: 5%; 
+    }
+    
+    .blog_content {
+        border-radius:20px;
+        background: linear-gradient(180deg, rgba(251, 98, 57, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%);
+        width: 350px;
+        height: 500px;
+        background: var(--secondary);
+        cursor: pointer;
+        margin-top: 5%;
+    }
+    
+    .image {
+        margin: 3%;
+        border-radius: 20px;
+        width: 330px;
+        height: 200px;
+    }
+    
+    
+    .desc {
+        font-family: 'Clash Display', sans-serif;
+        font-size: 17px;
+        font-weight: 300;
+        letter-spacing: -0.03em;
+        line-height: 1em;
+        margin-top: 5%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .Button{
+        margin-left: 3%;
+        background-color: var(--primary);
+        border-radius: 100px;
+        height: min-content;
+        overflow: visible;
+        padding: 8px 23px;
+        text-decoration: none;
+        width: min-content;
+        font-size: 15px;
+        font-weight: 500;
+        font-family: 'Clash Display', sans-serif;
+        color: var(--secondary);
+    }
+    .Button1{
+        margin: 3%;
+        background-color: var(--secondary);
+        border-radius: 100px;
+        height: min-content;
+        overflow: visible;
+        padding: 8px 23px;
+        text-decoration: none;
+        width: min-content;
+        font-size: 15px;
+        font-weight: 300;
+        font-family: 'Clash Display', sans-serif;
+        color: var(--primary);
+    }
+}
+@media (min-width:850px) and (max-width:1100px){
+    .main{
+        margin-top: 6%;
+        display: inline-block;
+       
+    }
+    .heading{
+        font-family: "Clash Display", sans-serif;
+        font-size: 60px;
+        font-weight: 300;
+        letter-spacing: -0.03em;
+        line-height: 1.1em;
+        color: var(--secondary);
+        margin-left:5%;
+    }
+    .callButton {
+        padding: 15px 30px;
+        background-color:var(--secondary);
+        color: var(--primary);
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-family: 'Clash Display', sans-serif;
+       position: relative;
+       top: 10px;
+       left: 100px;
+       font-size: 15px;
+       font-weight: 500;
+      }
+    .divider{
+        margin-top: 5%;
+    }
+    .blog{
+        margin-top: 5%;
+        margin-bottom: 5%; 
+    }
+    
+    .blog_content {
+        border-radius:20px;
+        background: linear-gradient(180deg, rgba(251, 98, 57, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%);
+        width: 310px;
+        height: 450px;
+        background: var(--secondary);
+        cursor: pointer;
+        margin-top: 5%;
+    }
+    
+    .image {
+        margin: 3%;
+        border-radius: 20px;
+        width: 290px;
+        height: 220px;
+    }
+    
+    .desc {
+        font-family: 'Clash Display', sans-serif;
+        font-size: 35px;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        line-height: 1em;
+        margin-top: 5%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .Button{
+        margin-left: 3%;
+        background-color: var(--primary);
+        border-radius: 100px;
+        height: min-content;
+        overflow: visible;
+        padding: 8px 23px;
+        text-decoration: none;
+        width: min-content;
+        font-size: 15px;
+        font-weight: 500;
+        font-family: 'Clash Display', sans-serif;
+        color: var(--secondary);
+    }
+    .Button1{
+        margin: 3%;
+        background-color: var(--secondary);
+        border-radius: 100px;
+        height: min-content;
+        overflow: visible;
+        padding: 8px 23px;
+        text-decoration: none;
+        width: min-content;
+        font-size: 15px;
+        font-weight: 300;
+        font-family: 'Clash Display', sans-serif;
+        color: var(--primary);
+    }
+}

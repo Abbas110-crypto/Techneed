@@ -1,0 +1,83 @@
+.Edit_Blog {
+    float: right;
+    margin-right: 20%;
+    margin-top: 2%;
+    width: 55%;
+    position: relative;
+    z-index: 1;
+}
+.heading {
+    margin-bottom: 5%;
+    color: var(--primary);
+    font-family: "Clash Display", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 25px;
+    text-align: center;
+
+}
+
+.EditBlog_L1 {
+    color: var(--primary);
+    font-family: "Clash Display", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.EditBlog_Input1 {
+    color: var(--primary);
+    width: 400px;
+    margin-bottom: 5%;
+}
+
+.EditBlog_L2 {
+    color: var(--primary);
+    font-family: "Clash Display", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.editor {
+    width: 125%;
+    height: 500px;
+    margin-bottom: 8%;
+    color:var(--primary);
+    background-color: #FFF;
+}
+
+
+.EditBlog_L3 {
+    color: var(--primary);
+    font-family: "Clash Display", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px; 
+}
+
+.TextArea {
+    margin-bottom: 5%;
+    width: 400px;
+}
+
+.UpdateButton {
+    margin-bottom: 3%;
+    background: #9f8e9b;
+    font-family: "Clash Display", sans-serif;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    width: 120px;
+    height: 35px;
+}
+
+.uploadbutton {
+    width: 400px;
+    height: 50px;
+    margin-bottom: 5%;
+}

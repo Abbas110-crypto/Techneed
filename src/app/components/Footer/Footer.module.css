@@ -1,0 +1,241 @@
+.main {
+    margin-top: 5%;
+    width: auto;
+    height: 500px;
+    border: 1px solid var(--primary);
+    border-radius: 50px;
+}
+
+.heading {
+
+    color: var(--primary);
+    font-family: 'Clash Display', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.Button {
+    background-color: var(--purple);
+    color: var(--secondary);
+    align-items: flex-start;
+    border-radius: 100px;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 10px 24px;
+    position: relative;
+    text-decoration: none;
+    width: min-content;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 2% !important;
+    margin: 0;
+}
+
+.text {
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.paragraph1 {
+    margin-top: 5%;
+    margin-left: 50%;
+    color: var(--primary);
+    font-family: 'Clash Display', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+.paragraph2{
+    color: var(--primary);
+    font-family: 'Clash Display', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    padding: 5%;
+
+}
+
+@media (min-width:350px) and (max-width:500px) {
+    .main {
+        margin-top: 5%;
+        width: auto;
+        height: 450px;
+        border: 1px solid var(--primary);
+        border-radius: 50px;
+    }
+
+    .heading {
+
+        color: var(--primary);
+        font-family: 'Clash Display', sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .Button {
+        background-color: var(--purple);
+        color: var(--secondary);
+        align-items: flex-start;
+        border-radius: 100px;
+        display: flex;
+        flex: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 10px;
+        height: min-content;
+        justify-content: flex-start;
+        overflow: visible;
+        padding: 10px 24px;
+        position: relative;
+        text-decoration: none;
+        width: min-content;
+        font-size: 15px;
+        font-weight: 700;
+        margin-top: 2% !important;
+        margin: 0;
+    }
+
+    .text {
+        margin-top: 5%;
+        margin-left: 10%;
+    }
+
+    .paragraph1 {
+        margin-left: 5%;
+        color: var(--primary);
+        font-family: 'Clash Display', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .Image_logo {
+      width: 250px;
+      height: 75px;
+    }
+    .paragraph2{
+        color: var(--primary);
+        font-family: 'Clash Display', sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        text-align: center;
+        padding: 5%;
+    
+    }
+}
+
+@media (min-width:500px) and (max-width:850px) {
+    .main {
+        margin-top: 5%;
+        width: auto;
+        height: auto;
+        border: 1px solid var(--primary);
+        border-radius: 50px;
+    }
+
+    .heading {
+
+        color: var(--primary);
+        font-family: 'Clash Display', sans-serif;
+        font-size: 35px;
+        font-weight: 700;
+    }
+
+    .Button {
+        background-color: var(--purple);
+        color: var(--secondary);
+        align-items: flex-start;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 10px;
+        height: min-content;
+        justify-content: flex-start;
+        overflow: visible;
+        padding: 10px 24px;
+        position: relative;
+        text-decoration: none;
+        width: min-content;
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 2% !important;
+        margin: 0;
+    }
+
+    .text {
+        margin-top: 5%;
+        margin-left: 10%;
+    }
+
+    .paragraph1 {
+        margin-left: 5%;
+        color: var(--primary);
+        font-family: 'Clash Display', sans-serif;
+        font-size: 22px;
+        font-weight: 300;
+        text-align: center;
+    }
+}
+
+@media (min-width:850px) and (max-width:1100px) {
+    .main {
+        margin-top: 5%;
+        width: auto;
+        height: auto;
+        border: 1px solid var(--primary);
+        border-radius: 50px;
+    }
+
+    .heading {
+
+        color: var(--primary);
+        font-family: 'Clash Display', sans-serif;
+        font-size: 35px;
+        font-weight: 700;
+    }
+
+    .Button {
+        background-color: var(--purple);
+        color: var(--secondary);
+        align-items: flex-start;
+        border-radius: 100px;
+        display: flex;
+        flex: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 10px;
+        height: min-content;
+        justify-content: flex-start;
+        overflow: visible;
+        padding: 15px 30px;
+        position: relative;
+        text-decoration: none;
+        width: min-content;
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 2% !important;
+        margin: 0;
+    }
+
+    .text {
+        margin-top: 5%;
+        margin-left: 10%;
+    }
+
+    .paragraph1 {
+        margin-left: 5%;
+        color: var(--primary);
+        font-family: 'Clash Display', sans-serif;
+        font-size: 22px;
+        font-weight: 300;
+    }
+
+}
