@@ -7,6 +7,7 @@ import { initAOS } from '../../AOS/Interceptor'; // Import the AOS initializatio
 import styles from './Hero.module.css';
 import Marquee from 'react-fast-marquee';
 
+
 function Hero() {
    const router = useRouter();
 
@@ -17,6 +18,7 @@ function Hero() {
          router.push('/contact');
      };
   return (
+   
     <div data-aos="fade-up">
     <div className={styles.main}>
         <Row>

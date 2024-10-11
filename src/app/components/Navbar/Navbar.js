@@ -17,10 +17,10 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.logo}>
       <Image
-        src="https://i.ibb.co/Br9rzFt/tech-removebg-preview.png" // Path to your image file
+        src="https://i.ibb.co/Br9rzFt/tech-removebg-preview.png" 
         alt="techneed logo"
-        width={100} // Desired width of the image
-        height={25} // Desired height of the image
+        width={110}
+        height={25}
         className={styles.Image_logo}
       />
       </div>

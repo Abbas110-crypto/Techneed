@@ -41,7 +41,7 @@
   
   .callButton {
     padding: 10px 23px;
-    background-color: #333333;
+    background-color: var(--purple);
     color: var(--secondary);
     border: none;
     border-radius: 30px;
