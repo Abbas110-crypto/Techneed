@@ -1,512 +1,176 @@
-.main{
-    margin-top: 10%;
-    display: inline-block;
-    margin-left: 10%;
-}
-.hd1{
-    font-size: 75px;
-    font-weight: 300;
-    color: var(--purple);
-    font-family: 'Clash Display', sans-serif;
-}
-.p2{
-    display: inline-block;
-    margin-left: 10%;
-}
-.hd2{
-    color: var(--purple);
-    padding-right: 20px;
-    font-size: 75px;
-    font-weight: 300;
-    font-family: 'Clash Display', sans-serif;
-}
-.hd3{
-    color: var(--purple);
-    padding-right: 20px;
-    font-size: 75px;
-    font-weight: 700;
-    font-family: 'Clash Display', sans-serif;
-    
-}
-.hd4{
-    padding-left: 20px;
-    font-size: 80px;
-    font-weight: 700;
-    color:var(--secondary);
-    font-family: 'Clash Display', sans-serif;
-    text-shadow: -1px -1px 0 #000,  
-                1px -1px 0 #000,
-                -1px 1px 0 #000,
-                1px 1px 0 #000;
-}
-.hd5{
-    padding-right: 20px;
-    font-size: 80px;
-    font-weight: 700;
-    color: var(--primary);
-    font-family: 'Clash Display', sans-serif;
-    text-shadow: -1px -1px 0 #000,  
-                1px -1px 0 #000,
-                -1px 1px 0 #000,
-                1px 1px 0 #000;
-}
-.paragraph{
-    margin-top: 2%;
-    font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
-    font-size: 22px;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    color: var(--primary);
-    padding-right: 5%;
-}
-.p3{
-    display: inline-block;
-    margin-left: 10%;
-    margin-top: 2%;
-}
-.Button{
-    background-color: var(--purple);
-    color: var(--secondary);
-    align-items: center;
-    text-align: center;
-    align-content: flex-start;
-    align-items: flex-start;
-    border-radius: 100px;
+/* components/HeroSection.module.css */
+
+/* Initial state for the hero section */
+.hero {
     display: flex;
-    flex: none;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 10px;
-    height: min-content;
-    justify-content: flex-start;
-    overflow: visible;
-    padding: 10px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 0 5%;
     position: relative;
-    text-decoration: none;
-    width: min-content;
-    font-size: 15px;
-    font-weight: 700;
-}
-.srvc_heading{
-    font-family: "Clash Display", sans-serif;
-    font-weight: 300;
-    font-size: 88px;
-    letter-spacing: -0.03em;
-    line-height: 1.1em;
-    color: var(--purple);
-    margin-left: 10%;
-    margin-top: 5%;
-}
-.CustomRow{
-    margin-top: 5%;
-    margin-bottom: 7%;
-}
-.slider{
-    overflow: hidden;
-  position: relative;
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0,0,0,0));
-  box-shadow: inset rgb(183 109 109 / 10%) 8px 2px 3px 0px, inset rgba(0, 0, 0, 0.06);
+    color: #000;
+    backdrop-filter: blur(5px); /* Optional: Adds a slight blur to enhance visibility */
+    
+    /* Add initial transform for animation */
+    transform: translateY(40px); /* Start 40px lower than its original position */
+    opacity: 0; /* Start invisible */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Transition properties */
 }
 
-.ImageSlider{
-    margin-right: 20px;
-    border-radius: 20px;
-    border: solid 1px #fff;
+/* Active class to trigger animation */
+.hero.visible {
+    transform: translateY(0); /* Move to original position */
+    opacity: 1; /* Fade in */
 }
-.CompanySlider{
-    border-top: solid 1px #fff;
-    border-bottom: solid 1px #fff;
-    width: 100%; 
 
-}
-.CompanyItem{
-    margin: 15%;
-    display: inline-block;
-}
-.marquee {
-    overflow: hidden;
-    white-space: nowrap;
+.heroHeader {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-  }
-.mobileicon{
-    display: none;
+    align-items: center;
+    
 }
 
-@media (min-width:370px) and (max-width:500px){
-    .main{
-        margin-top: 30%;
-        display: inline-block;
-        margin-left: 3%;
-    }
-    .mobileicon{
-        margin-left: 3%;
-        margin-right: 0;
-    }
-    .hd1{
-        font-size: 30px;
-        font-weight: 300;
-        color: var(--purple);
-        font-family: 'Clash Display', sans-serif;
-    }
-    .p2{
-        display: inline-block;
-        margin-left: 3%;
-    }
-    .hd2{
-        color: var(--purple);
-        font-size: 30px;
-        font-weight: 300;
-        font-family: 'Clash Display', sans-serif;
-        margin-right: 0;
-        margin-left: 3%;
-    }
-    .hd3{
-        color: var(--purple);
-        padding-right: 20px;
-        font-size: 30px;
-        font-weight: 700;
-        font-family: 'Clash Display', sans-serif;
-        
-    }
-    .hd4{
-        padding-left: 20px;
-        font-size: 80px;
-        font-weight: 700;
-        color:var(--secondary);
-        font-family: 'Clash Display', sans-serif;
-        text-shadow: -1px -1px 0 #000,  
-                    1px -1px 0 #000,
-                    -1px 1px 0 #000,
-                    1px 1px 0 #000;
-    }
-    .hd5{
-        padding-right: 20px;
-        font-size: 80px;
-        font-weight: 700;
-        color: var(--secondary);
-        font-family: 'Clash Display', sans-serif;
-        text-shadow: -1px -1px 0 #000,  
-                    1px -1px 0 #000,
-                    -1px 1px 0 #000,
-                    1px 1px 0 #000;
-    }
-    .srvc_heading{
-        margin-top: 5%;
-        margin-left: 5%;
-        font-family: "Clash Display", sans-serif;
-        font-weight: 300;
-        font-size: 40px;
-        letter-spacing: -0.03em;
-        line-height: 1.1em;
-        color: var(--purple);
-    }
-    .paragraph{
-        margin-top: 2%;
-        font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
-        font-size: 18px;
-        font-weight: 500;
-        letter-spacing: -0.02em;
-        color: var(--primary);
-    }
-    .p3{
-        display: inline-block;
-        margin-left: 10%;
-        margin-top: 2%;
-    }
-    .Button{
-        background-color: var(--purple);
-        color: var(--secondary);
-        align-items: center;
-        text-align: center;
-        align-content: flex-start;
-        align-items: flex-start;
-        border-radius: 100px;
-        display: flex;
-        flex: none;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        height: min-content;
-        justify-content: flex-start;
-        overflow: visible;
-        padding: 8px 20px;
-        position: relative;
-        text-decoration: none;
-        width: min-content;
-        font-size: 15px;
-        font-weight: 700;
-        margin-top: 3%;
-        
-    }
-    .icon{
-        display: none;
-    }
-    .CustomRow{
-        margin-top: 10%;
-        margin-bottom: 7%;
-    }
-    .slider{
-        overflow: hidden;
-      position: relative;
-      mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0));
-      box-shadow: inset rgb(183 109 109 / 10%) 8px 2px 3px 0px, inset rgba(0, 0, 0, 0.06);
-    }
-    
-    .ImageSlider{
-        margin-right: 20px;
-        border-radius: 20px;
-        border: solid 1px #fff;
-    }
-    .CompanySlider{
-        border-top: solid 1px #fff;
-        border-bottom: solid 1px #fff;
-    }
-    .CompanyItem{
-        margin-top: 15%;
-        margin-bottom: 15%;
-    }
-    .mobileicon{
-        display: inline;
-    }   
-}
-@media (min-width:500px) and (max-width:850px){
-    .main{
-        margin-top: 15%;
-        display: inline-block;
-        margin-left: 5%;
-    }
-    .mobileicon{
-        margin-left: 5%;
-        margin-right: 0;
-    }
-    .hd1{
-        font-size: 50px;
-        font-weight: 300;
-        color: var(--purple);
-        font-family: 'Clash Display', sans-serif;
-    }
-    .p2{
-        display: inline-block;
-        margin-left: 3%;
-    }
-    .hd2{
-        color: var(--purple);
-        font-size: 50px;
-        font-weight: 300;
-        font-family: 'Clash Display', sans-serif;
-        margin-right: 0;
-        margin-left: 3%;
-    }
-    .hd3{
-        color: var(--purple);
-        padding-right: 20px;
-        font-size: 50px;
-        font-weight: 700;
-        font-family: 'Clash Display', sans-serif;
-      
-    }
-    
-    .hd5{
-        padding-right: 20px;
-        font-size: 80px;
-        font-weight: 700;
-        color: var(--secondary);
-        font-family: 'Clash Display', sans-serif;
-        text-shadow: -1px -1px 0 #000,  
-                    1px -1px 0 #000,
-                    -1px 1px 0 #000,
-                    1px 1px 0 #000;
-    }
-    .srvc_heading{
-        margin-top: 5%;
-        margin-left: 5%;
-        font-family: "Clash Display", sans-serif;
-        font-weight: 300;
-        font-size: 50px;
-        letter-spacing: -0.03em;
-        line-height: 1.1em;
-        color: var(--purple);
-    }
-    .paragraph{
-        margin: 2%;
-        font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
-        font-size: 22px;
-        font-weight: 500;
-        letter-spacing: -0.02em;
-        color: var(--primary);
-    }
-    .p3{
-        display: inline-block;
-        margin-left: 5%;
-        margin-top: 2%;
-    }
-    .Button{
-        background-color: var(--purple);
-        color: var(--secondary);
-        align-items: center;
-        text-align: center;
-        align-content: flex-start;
-        align-items: flex-start;
-        border-radius: 100px;
-        display: flex;
-        flex: none;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        height: min-content;
-        justify-content: flex-start;
-        overflow: visible;
-        padding: 8px 20px;
-        position: relative;
-        text-decoration: none;
-        width: min-content;
-        font-size: 15px;
-        font-weight: 700;
-        margin-top: 3%;
-        
-    }
-    .icon{
-        display: none;
-    }
-    .CustomRow{
-        margin-top: 10%;
-        margin-bottom: 7%;
-    }
-    .slider{
-        overflow: hidden;
-      position: relative;
-      mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0));
-      box-shadow: inset rgb(183 109 109 / 10%) 8px 2px 3px 0px, inset rgba(0, 0, 0, 0.06);
-    }
-    
-    .ImageSlider{
-        margin-right: 20px;
-        border-radius: 20px;
-        border: solid 1px #fff;
-    }
-    .CompanySlider{
-        border-top: solid 1px #fff;
-        border-bottom: solid 1px #fff;
-    }
-    .CompanyItem{
-        margin-top: 15%;
-        margin-bottom: 15%;
-    }
-    .mobileicon{
-        display: inline;
-    }   
+.logo {
+    max-width: 100px;
 }
 
-@media (min-width:850px) and (max-width:1100px){
-    .main{
-        margin-top: 15%;
-        display: inline-block;
-        margin-left: 5%;
+.anniversary {
+    font-size: 0.9rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.heroText {
+    margin-top: 2rem;
+    max-width: 800px;
+    position: relative;
+    line-height: 1;
+}
+
+.heroText h1 {
+    font-size: 8rem;
+    font-weight: 900;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.rebel {
+    display: block;
+    margin-left: -150px;
+    font-family: "DM Sans", serif;
+    font-size: 200px;
+    font-weight: 600;
+    transform: scaleX(1.2);
+
+}
+
+.against {
+    display: block;
+    font-family: "DM Sans", serif;
+    font-size: 200px;
+    font-weight: 600;
+    margin-left: 50px;
+    margin-top: -75px;
+    transform: scaleX(1.2);
+}
+
+.boring {
+    display: block;
+    font-family: "DM Sans", serif;
+    font-size: 200px;
+    font-weight: 600;
+    margin-top: -24px;
+    margin-left: -80px;    
+    transform: scaleX(1.2); 
+}
+
+.description {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 300px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #333;
+}
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 1200px) {
+    .heroText h1 {
+        font-size: 6rem;
     }
-    .mobileicon{
-        display: none!important;
+
+    .rebel, .against, .boring {
+        font-size: 150px;
+        margin-left: 0;
     }
-    .hd1{
+
+    .against {
+        margin-top: -60px;
+    }
+
+    .boring {
+        margin-top: 0;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroText h1 {
+        font-size: 4rem;
+    }
+
+    .rebel, .against, .boring {
+        font-size: 100px;
+    }
+
+    .against {
+        margin-top: -40px;
+    }
+
+    .boring {
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .description {
+        font-size: 12px;
+        max-width: 250px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroText h1 {
+        font-size: 3rem;
+    }
+
+    .rebel, .against, .boring {
         font-size: 60px;
-        font-weight: 300;
-        color: var(--purple);
-        font-family: 'Clash Display', sans-serif;
     }
-    .p2{
-        display: inline-block;
-        margin-left: 3%;
+
+    .against {
+        margin-top: -20px;
     }
-    .hd2{
-        color: var(--purple);
-        font-size: 60px;
-        font-weight: 300;
-        font-family: 'Clash Display', sans-serif;
-        margin-right: 0;
-        margin-left: 3%;
+
+    .boring {
+        margin-left: 0;
+        margin-top: 0;
     }
-    .hd3{
-        color: var(--purple);
-        padding-right: 20px;
-        font-size: 60px;
-        font-weight: 700;
-        font-family: 'Clash Display', sans-serif;
-      
+
+    .description {
+        font-size: 10px;
+        max-width: 200px;
+        bottom: 10px;
+        right: 10px;
     }
-    
-    .hd5{
-        padding-right: 20px;
-        font-size: 80px;
-        font-weight: 700;
-        color: var(--secondary);
-        font-family: 'Clash Display', sans-serif;
-        text-shadow: -1px -1px 0 #000,  
-                    1px -1px 0 #000,
-                    -1px 1px 0 #000,
-                    1px 1px 0 #000;
-    }
-    .paragraph{
-        margin: 2%;
-        font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
-        font-size: 25px;
-        font-weight: 500;
-        letter-spacing: -0.02em;
-        color: var(--primary);
-    }
-    .p3{
-        display: inline-block;
-        margin-left: 5%;
-        margin-top: 2%;
-    }
-    .Button{
-        background-color: var(--purple);
-        color: var(--secondary);
-        align-items: center;
-        text-align: center;
-        align-content: flex-start;
-        align-items: flex-start;
-        border-radius: 100px;
-        display: flex;
-        flex: none;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        height: min-content;
-        justify-content: flex-start;
-        overflow: visible;
-        padding: 10px 24px;
-        position: relative;
-        text-decoration: none;
-        width: min-content;
-        font-size: 18px;
-        font-weight: 700;
-        margin-top: 3%;
-        
-    }
-    .icon{
-        display: inline;
-    }
-    .CustomRow{
-        margin-top: 10%;
-        margin-bottom: 7%;
-    }
-    .slider{
-        overflow: hidden;
-      position: relative;
-      mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0));
-      box-shadow: inset rgb(183 109 109 / 10%) 8px 2px 3px 0px, inset rgba(0, 0, 0, 0.06);
-    }
-    
-    .ImageSlider{
-        margin-right: 20px;
-        border-radius: 20px;
-        border: solid 1px #fff;
-    }
-    .CompanySlider{
-        border-top: solid 1px #fff;
-        border-bottom: solid 1px #fff;
-    }
-    .CompanyItem{
-        margin-top: 15%;
-        margin-bottom: 15%;
-    }
-    .mobileicon{
-        display: inline;
-    }   
 }

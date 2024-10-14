@@ -1,267 +1,154 @@
-.main{
+.main {
     margin-top: 4%;
     display: inline-block;
     margin-left: 10%;
 }
-.heading{
+
+.hd1 {
+    display: block;
     font-family: "Clash Display", sans-serif;
-    font-weight: 300;
-    font-size: 88px;
-    letter-spacing: -0.03em;
-    line-height: 1.1em;
+    font-size: 150px;
     color: var(--purple);
+    font-weight: 350;
 }
-.paragraph1{
+
+.hd2 {
+    display: block;
+    font-size: 150px;
+    color: var(--purple);
+    font-weight: 350;
+    margin-left: 180px;
+    margin-top: -50px;
+}
+
+.paragraph1 {
     font-family: "Satoshi";
     font-size: 24px;
     letter-spacing: -0.03em;
     line-height: 1.5em;
     color: var(--primary);
 }
-.subheading{
+
+.subheading {
     margin-top: 1%;
     font-family: "Clash Display", sans-serif;
     font-size: 40px;
     letter-spacing: -0.03em;
     line-height: 1.4em;
-    color:var(--primary);
+    color: var(--primary);
     font-weight: 300;
 }
-.container{
+.container {
     margin-top: 5%;
     border-radius: 32px;
-    width: 1100px;
-    height: 500px;
-    background-color: var(--purple);
+    max-width: 1200px;
+    width: 100%;
+    height: 100%; 
+    background-color: var(--secondary);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
 }
-.container1{
-    background-color:var(--secondary);
+
+.container1 {
+    background-color: transparent;
     border-radius: 30px;
-    box-shadow: 2px 10px 20px #00000026;
-    width: 450px;
     height: 500px;
-    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
-.h1{
-    padding-top: 80px;
-    padding-left: 30px;
-    padding-right: 20px;
+
+.img {
+    width: 100%;
+    flex: 1; 
+    height: 500px; 
+    border-top-right-radius: 100px;
+    background-color: black;
+    object-fit: cover;
+}
+
+.h1 {
+   
     font-family: "Clash Display", sans-serif;
-    font-size: 45px;
+    font-size: 80px;
+    padding-bottom: 10px;
     font-weight: 400;
-    line-height: 55px;
-    color: var(--purple);
-}
-.paragraph2{
-    padding: 30px;
-    font-family: "Clash Display", sans-serif;
-    font-size: 15px;
-    line-height: 25px;
+    line-height: 75px;
     color: var(--primary);
 }
 
-@media (min-width:350px) and (max-width:500px){
-    .main{
-        margin-top: 4%;
-        display: inline-block;
-        margin-left: 5%;
+.paragraph2 {
+    font-family: "Clash Display", sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+    margin-top: 20px;
+    color: var(--primary);
+}
+
+.tag {
+    border-radius: 12px; 
+    background-color: transparent;
+    color: black; 
+    border: 2px solid rgb(129, 124, 124); 
+    padding: 8px;
+    font-family: "Clash Display", sans-serif;
+    font-size: 20px;
+    display: inline-block;
+    margin: 4px;
+}
+
+@media (max-width: 992px) { /* Tablets */
+    .hd1, .hd2 {
+        font-size: 100px;
+        margin-left: 0;
     }
-    .heading{
-        font-family: "Clash Display", sans-serif;
-        font-weight: 300;
-        font-size: 40px;
-        letter-spacing: -0.03em;
-        line-height: 1.1em;
-        color: var(--purple);
-    }
-    .paragraph1{
-        font-family: "Satoshi";
-        font-size: 15px;
-        letter-spacing: -0.03em;
-        line-height: 1.5em;
-        color: var(--primary);
-    }
-    .subheading{
-        margin-top: 1%;
-        font-family: "Clash Display", sans-serif;
-        font-size: 22px;
-        letter-spacing: -0.03em;
-        line-height: 1.4em;
-        color:var(--primary);
-        font-weight: 300;
-    }
-    .container{
-        margin-top: 5%;
-        border-radius: 32px;
-        width: 360px;
-        height: 1000px;
-        background-color: var(--purple);
-    }
-    .container1{
-        background-color:var(--secondary);
-        border-radius: 30px;
-        box-shadow: 2px 10px 20px #00000026;
-        width: 360px;
-        height: 500px;
-        margin: 0;
-    }
-    .img{
-        width: 350px;
-        height: 500px;
-    }
-    .h1{
-        padding-top: 80px;
-        padding-left: 30px;
-        padding-right: 20px;
-        font-family: "Clash Display", sans-serif;
+    .h1 {
         font-size: 35px;
-        font-weight: 400;
-        line-height: 42px;
-        color: var(--purple);
+        padding-top: 50px;
     }
-    .paragraph2{
-        padding: 30px;
-        font-family: "Clash Display", sans-serif;
-        font-size: 15px;
-        line-height: 25px;
-        color: var(--primary);
+    .paragraph2 {
+        font-size: 14px;
+        padding: 20px;
     }
 }
 
-@media (min-width:500px) and (max-width:850px){
-    .main{
-        margin-top: 4%;
-        display: inline-block;
+@media (max-width: 768px) { /* Mobile devices */
+    .main {
         margin-left: 5%;
     }
-    .heading{
-        font-family: "Clash Display", sans-serif;
-        font-weight: 300;
-        font-size: 50px;
-        letter-spacing: -0.03em;
-        line-height: 1.1em;
-        color: var(--purple);
+    .container {
+        padding: 10px;
     }
-    .paragraph1{
-        font-family: "Satoshi";
-        font-size: 20px;
-        letter-spacing: -0.03em;
-        line-height: 1.5em;
-        color: var(--primary);
+    .container1 {
+        padding: 10px;
     }
-    .subheading{
-        margin-top: 1%;
-        font-family: "Clash Display", sans-serif;
+    .h1 {
         font-size: 30px;
-        letter-spacing: -0.03em;
-        line-height: 1.2em;
-        color:var(--primary);
-        font-weight: 300;
+        padding-top: 30px;
     }
-    .container{
-        margin-top: 5%;
-        border-radius: 32px;
-        width: 700px;
-        height: 500px;
-        background-color: var(--purple);
+    .paragraph2 {
+        font-size: 13px;
+        padding: 10px;
     }
-    .container1{
-        background-color:var(--secondary);
-        border-radius: 30px;
-        box-shadow: 2px 10px 20px #00000026;
-        width: 350px;
-        height: 500px;
-        margin: 0;
+    .hd1, .hd2 {
+        font-size: 80px;
+        margin-left: 0;
+        margin-top: 0;
     }
-    .img{
-        width: 290px;
-        height: 370px;
-        margin-left: 3%;
-    }
-    .h1{
-        padding-top: 80px;
-        padding-left: 30px;
-        padding-right: 20px;
-        font-family: "Clash Display", sans-serif;
-        font-size: 35px;
-        font-weight: 400;
-        line-height: 40px;
-        color: var(--purple);
-    }
-    .paragraph2{
-        padding: 20px;
-        font-family: "Clash Display", sans-serif;
-        font-size: 18px;
-        line-height: 25px;
-        color: var(--primary);
+    .img {
+        width: 100%;
+        height: auto;
     }
 }
 
-@media (min-width:850px) and (max-width:1100px){
-    .main{
-        margin-top: 4%;
-        display: inline-block;
-        margin-left: 5%;
-    }
-    .heading{
-        font-family: "Clash Display", sans-serif;
-        font-weight: 300;
+@media (max-width: 480px) { /* Small mobile devices */
+    .hd1, .hd2 {
         font-size: 60px;
-        letter-spacing: -0.03em;
-        line-height: 1.1em;
-        color: var(--purple);
     }
-    .paragraph1{
-        font-family: "Satoshi";
+    .h1 {
         font-size: 25px;
-        letter-spacing: -0.03em;
-        line-height: 1.5em;
-        color: var(--primary);
     }
-    .subheading{
-        margin-top: 1%;
-        font-family: "Clash Display", sans-serif;
-        font-size: 35px;
-        letter-spacing: -0.03em;
-        line-height: 1.2em;
-        color:var(--primary);
-        font-weight: 300;
-    }
-    .container{
-        margin-top: 5%;
-        border-radius: 32px;
-        width: 950px;
-        height: 500px;
-        background-color: var(--purple);
-    }
-    .container1{
-        background-color:var(--secondary);
-        border-radius: 30px;
-        box-shadow: 2px 10px 20px #00000026;
-        width: 450px;
-        height: 500px;
-        margin: 0;
-    }
-    .img{
-        width: 400px;
-        height: 400px;
-        margin-left: 3%;
-    }
-    .h1{
-        padding-top: 80px;
-        padding-left: 30px;
-        padding-right: 20px;
-        font-family: "Clash Display", sans-serif;
-        font-size: 40px;
-        font-weight: 400;
-        line-height: 50px;
-        color: var(--purple);
-    }
-    .paragraph2{
-        padding: 20px;
-        font-family: "Clash Display", sans-serif;
-        font-size: 20px;
-        line-height: 25px;
-        color: var(--primary);
+    .paragraph2 {
+        font-size: 12px;
     }
 }

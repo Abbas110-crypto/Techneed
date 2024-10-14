@@ -4,7 +4,7 @@ import CaseStudies from "./components/Case Studies/CaseStudies";
 import Testimonials from './components/Testimonials/Testimonials';
 import Advisory from './components/Advisory/Advisory';
 import AnimatedBg from './components/AnimatedBg/AnimatedBg'
-
+import BespokeSection from './components/BeSpoke/BeSpokeSection'
 export default function Home() {
   return (
    <div>
@@ -12,6 +12,7 @@ export default function Home() {
     <Hero />
     <Testimonials />
      <Container /> 
+     <BespokeSection/>
     <CaseStudies />
     <Advisory />  
    </div>

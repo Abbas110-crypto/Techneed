@@ -1,12 +1,11 @@
-"use client"; // Ensure this line is at the top
-
+"use client";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 const AnimatedBg = () => {
   const mountRef = useRef(null);
   const mousePosition = useRef(new THREE.Vector2(0, 0));
-  const targetMousePosition = useRef(new THREE.Vector2(0, 0)); // For smooth transition
+  const targetMousePosition = useRef(new THREE.Vector2(0.8, 0.8));
 
   useEffect(() => {
     const scene = new THREE.Scene();
@@ -16,6 +15,10 @@ const AnimatedBg = () => {
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.domElement.style.position = 'fixed'; // Fix the background
+    renderer.domElement.style.top = '0';
+    renderer.domElement.style.left = '0';
+    renderer.domElement.style.zIndex = '-1';
     mountRef.current?.appendChild(renderer.domElement);
 
     const geometry = new THREE.PlaneGeometry(2, 2);
@@ -24,14 +27,14 @@ const AnimatedBg = () => {
     const fragmentShaderPeach = `
     uniform vec2 u_resolution;
     uniform float u_time;
-  
+
     float verticalWave(float y, float time) {
         return 0.05 * sin(10.0 * (y + time * 0.5)); // Creates a sine wave effect
     }
-  
+
     void main() {
         vec2 st = gl_FragCoord.xy / u_resolution;
-  
+
         if (st.x > 0.5) {
             float waveEffect = verticalWave(st.y, u_time);
             vec3 peachColor = vec3(1.0, 0.8 + waveEffect, 0.7); // Vary the green component slightly to create movement
@@ -40,8 +43,7 @@ const AnimatedBg = () => {
             discard; // Discard fragments on the left side
         }
     }
-  `;
-
+    `;
 
     const peachShaderMaterial = new THREE.ShaderMaterial({
       uniforms: {
@@ -52,48 +54,49 @@ const AnimatedBg = () => {
       transparent: true,
     });
 
-
     const peachPlane = new THREE.Mesh(geometry, peachShaderMaterial);
     peachPlane.position.set(0, 0, 0);
     scene.add(peachPlane);
 
     // Main pink animation shader with gradient and vignette effect
     const fragmentShaderPink = `
-      uniform vec2 u_resolution;
-      uniform vec2 u_mouse;
-      uniform float u_time;
+    uniform vec2 u_resolution;
+    uniform vec2 u_mouse;
+    uniform float u_time;
 
-      float fluctuation(float x, float time) {
-          return 0.1 * sin(10.0 * (x + time * 0.5));
-      }
+    float fluctuation(float x, float time) {
+        return 0.1 * sin(10.0 * (x + time * 0.5));
+    }
 
-      void main() {
-          vec2 st = gl_FragCoord.xy / u_resolution;
-          float middleFade = smoothstep(0.35, 0.65, st.x);
+    void main() {
+        vec2 st = gl_FragCoord.xy / u_resolution;
+        float middleFade = smoothstep(0.35, 0.65, st.x);
 
-          float dist = length(st - u_mouse);
-          float size = 0.5;
-          float startDistance = length(st - vec2(0.0, 1.0));
-          float fluctuationEffect = fluctuation(st.y, u_time);
+        float dist = length(st - u_mouse);
+        float size = 0.5;
+        float startDistance = length(st - vec2(0.0, 1.0));
+        float fluctuationEffect = fluctuation(st.y, u_time);
 
-          float intensity = smoothstep(startDistance + fluctuationEffect, startDistance - size, dist);
+        float intensity = smoothstep(startDistance + fluctuationEffect, startDistance - size, dist);
 
-          vec3 lightPink = vec3(1.0, 0.6, 0.8);
-          vec3 darkPink = vec3(0.8, 0.2, 0.67);
-          vec3 pinkGradient = mix(lightPink, darkPink, st.y);
+        // Enhance the gradient look
+        vec3 lightPink = vec3(1.0, 0.8, 0.9); 
+        vec3 lightPurple = vec3(0.95, 0.75, 1.0);
+        vec3 darkPurple = vec3(0.7, 0.5, 0.9); 
+        vec3 purpleGradient = mix(lightPurple, darkPurple, st.y);
 
-          vec3 blueColor = vec3(0.3, 0.5, 1.0);
-          float edgeFactor = smoothstep(0.0, 0.5, intensity);
-          vec3 color = mix(blueColor, pinkGradient, edgeFactor);
+        vec3 blueColor = vec3(0.5, 0.7, 1.0); // Lighter background color
+        float edgeFactor = smoothstep(0.0, 0.5, intensity);
+        vec3 color = mix(blueColor, purpleGradient, edgeFactor);
 
-          vec3 baseColor = vec3(1.0, 0.92, 0.98);
-          color = mix(baseColor, color, intensity);
+        vec3 baseColor = vec3(1.0, 0.98, 1.0); // Lighter background base color
+        color = mix(baseColor, color, intensity);
 
-          float vignette = smoothstep(0.8, 1.0, length(st - vec2(0.5, 0.5)));
-          color = mix(color, vec3(1.0), vignette);
+        float vignette = smoothstep(0.9, 1.0, length(st - vec2(0.5, 0.5)));
+        color = mix(color, vec3(1.0), vignette);
 
-          gl_FragColor = vec4(color, 1.0);
-      }
+        gl_FragColor = vec4(color, 1.0);
+    }
     `;
 
     const shaderMaterialPink = new THREE.ShaderMaterial({
@@ -110,9 +113,13 @@ const AnimatedBg = () => {
     mainPlanePink.position.set(0, 0, 0.1);
     scene.add(mainPlanePink);
 
+    // Set initial mouse position to the center
+    targetMousePosition.current.set(0, 0);
+    mousePosition.current.copy(targetMousePosition.current); // Initialize mousePosition
+
     const animate = () => {
       shaderMaterialPink.uniforms.u_time.value += 0.01;
-      peachShaderMaterial.uniforms.u_time.value += 0.01; // Update the time for peach waves as well
+      peachShaderMaterial.uniforms.u_time.value += 0.01;
 
       mousePosition.current.lerp(targetMousePosition.current, 0.1);
       shaderMaterialPink.uniforms.u_mouse.value.copy(mousePosition.current);
@@ -147,7 +154,7 @@ const AnimatedBg = () => {
     };
   }, []);
 
-  return <div ref={mountRef} style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: -1 }} />;
+  return <div ref={mountRef} style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", zIndex: -1 }} />;
 };
 
 export default AnimatedBg;
