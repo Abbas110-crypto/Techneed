@@ -15,7 +15,7 @@ const AnimatedBg = () => {
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.domElement.style.position = 'fixed'; // Fix the background
+    renderer.domElement.style.position = 'fixed'; 
     renderer.domElement.style.top = '0';
     renderer.domElement.style.left = '0';
     renderer.domElement.style.zIndex = '-1';
@@ -29,7 +29,7 @@ const AnimatedBg = () => {
     uniform float u_time;
 
     float verticalWave(float y, float time) {
-        return 0.05 * sin(10.0 * (y + time * 0.5)); // Creates a sine wave effect
+        return 0.05 * sin(10.0 * (y + time * 0.5));
     }
 
     void main() {
@@ -37,10 +37,10 @@ const AnimatedBg = () => {
 
         if (st.x > 0.5) {
             float waveEffect = verticalWave(st.y, u_time);
-            vec3 peachColor = vec3(1.0, 0.8 + waveEffect, 0.7); // Vary the green component slightly to create movement
-            gl_FragColor = vec4(peachColor, 0.5); // Use semi-transparency
+            vec3 peachColor = vec3(1.0, 0.8 + waveEffect, 0.7);
+            gl_FragColor = vec4(peachColor, 0.5);
         } else {
-            discard; // Discard fragments on the left side
+            discard;
         }
     }
     `;
@@ -58,14 +58,14 @@ const AnimatedBg = () => {
     peachPlane.position.set(0, 0, 0);
     scene.add(peachPlane);
 
-    // Main pink animation shader with gradient and vignette effect
+    // Main pink animation shader with expanded area
     const fragmentShaderPink = `
     uniform vec2 u_resolution;
     uniform vec2 u_mouse;
     uniform float u_time;
 
-    float fluctuation(float x, float time) {
-        return 0.1 * sin(10.0 * (x + time * 0.5));
+    float wavePattern(float x, float time) {
+        return 0.1 * sin(5.0 * (x + time * 0.5));
     }
 
     void main() {
@@ -75,21 +75,20 @@ const AnimatedBg = () => {
         float dist = length(st - u_mouse);
         float size = 0.5;
         float startDistance = length(st - vec2(0.0, 1.0));
-        float fluctuationEffect = fluctuation(st.y, u_time);
+        float waveEffect = wavePattern(st.y, u_time);
 
-        float intensity = smoothstep(startDistance + fluctuationEffect, startDistance - size, dist);
+        float intensity = smoothstep(startDistance + waveEffect, startDistance - size, dist);
 
-        // Enhance the gradient look
-        vec3 lightPink = vec3(1.0, 0.8, 0.9); 
+        // vec3 lightPink = vec3(1.0, 0.8, 0.9);
         vec3 lightPurple = vec3(0.95, 0.75, 1.0);
-        vec3 darkPurple = vec3(0.7, 0.5, 0.9); 
+        vec3 darkPurple = vec3(0.7, 0.5, 0.9);
         vec3 purpleGradient = mix(lightPurple, darkPurple, st.y);
 
-        vec3 blueColor = vec3(0.5, 0.7, 1.0); // Lighter background color
+        vec3 lightPink = vec3(0.8, 0.6, 0.7);
         float edgeFactor = smoothstep(0.0, 0.5, intensity);
-        vec3 color = mix(blueColor, purpleGradient, edgeFactor);
+        vec3 color = mix(lightPink, purpleGradient, edgeFactor);
 
-        vec3 baseColor = vec3(1.0, 0.98, 1.0); // Lighter background base color
+        vec3 baseColor = vec3(1.0, 0.98, 1.0);
         color = mix(baseColor, color, intensity);
 
         float vignette = smoothstep(0.9, 1.0, length(st - vec2(0.5, 0.5)));
@@ -113,9 +112,8 @@ const AnimatedBg = () => {
     mainPlanePink.position.set(0, 0, 0.1);
     scene.add(mainPlanePink);
 
-    // Set initial mouse position to the center
     targetMousePosition.current.set(0, 0);
-    mousePosition.current.copy(targetMousePosition.current); // Initialize mousePosition
+    mousePosition.current.copy(targetMousePosition.current);
 
     const animate = () => {
       shaderMaterialPink.uniforms.u_time.value += 0.01;
@@ -137,7 +135,7 @@ const AnimatedBg = () => {
 
     window.addEventListener("mousemove", handleMouseMove);
 
-    window.addEventListener("resize", () => {
+    const handleResize = () => {
       camera.left = -1;
       camera.right = 1;
       camera.top = 1;
@@ -146,10 +144,13 @@ const AnimatedBg = () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
       peachShaderMaterial.uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight);
       shaderMaterialPink.uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight);
-    });
+    };
+
+    window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("resize", handleResize);
       mountRef.current?.removeChild(renderer.domElement);
     };
   }, []);

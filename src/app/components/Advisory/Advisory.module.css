@@ -1,120 +1,175 @@
-.main{
-    margin-top: 4%;
-    display: inline-block;
-    margin-left: 10%;
+.main {
+    margin: 0;
+    margin-top: 5%;
+    display: block;
+    background-color: var(--primary);
 }
-.heading1{
+
+.leftSection {
+    padding-top: 18%;
+}
+
+.our {
+    display: block;
+    color: var(--secondary);
+    font-size: 100px; 
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.work {
+    display: block;
+    color: var(--secondary);
+    font-size: 100px;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-top: -20px; 
+}
+
+.hd1 {
     font-family: "Clash Display", sans-serif;
-    font-weight: 300;
-    font-size: 88px;
+    color: var(--secondary);
+    font-weight: 400;
+    font-size: 30px;
     letter-spacing: -0.03em;
     line-height: 1.1em;
-    color: var(--purple);
 }
-.paragraph1{
+
+.para {
     font-family: "Satoshi";
-    font-size: 24px;
+    color: var(--secondary);
+    font-size: 16px; 
     letter-spacing: -0.03em;
     line-height: 1.5em;
-    color: var(--primary);
 }
-.heading2{
-    margin-top: 1%;
-    font-family: "Clash Display", sans-serif;
-    font-size: 40px;
-    letter-spacing: -0.03em;
-    line-height: 1.4em;
-    color:var(--primary);
+
+.portfolioSection {
+    margin: 5%;
+    padding: 0;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--primary);
+    padding: 20px;
+}
+
+.cardTitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--secondary);
+}
+
+.cardImageContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.cardImage {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.cardDescription {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary);
+    font-size: 30px;
     font-weight: 300;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
-.paragraph2{
-    font-family: "Satoshi";
-    font-size: 24px;
-    letter-spacing: -0.03em;
-    line-height: 1.5em;
-    color: var(--primary);
+
+.tagContainer {
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-@media (min-width:250px) and (max-width: 500px){
-    .main{
-        margin-top: 4%;
-        display: inline-block;
-        margin-left: 5%;
+
+.ant-tag {
+    border-radius: 10px;
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}
+
+.card:hover .cardImage {
+    opacity: 0.3; 
+}
+
+.card:hover .cardDescription {
+    opacity: 1; 
+}
+
+@media (min-width: 768px) {
+    .our {
+        font-size: 120px; 
+        margin-left: 50px; 
     }
-    .heading1{
-        font-family: "Clash Display", sans-serif;
-        font-weight: 300;
-        font-size: 40px;
-        letter-spacing: -0.03em;
-        line-height: 1.1em;
-        color: var(--purple);
+
+    .work {
+        font-size: 120px; 
+        margin-left: 50px; 
+        margin-top: -30px; 
     }
-    .paragraph1{
-        font-family: "Satoshi";
-        font-size: 18px;
-        letter-spacing: -0.03em;
-        line-height: 1.5em;
-        color: var(--primary);
-        padding-right: 40px;
-        padding-bottom: 20px;
+
+    .hd1 {
+        font-size: 40px; 
     }
-    .heading2{
-        font-family: "Clash Display", sans-serif;
-        font-size: 30px;
-        letter-spacing: -0.03em;
-        line-height: 1em;
-        color:var(--primary);
-        font-weight: 300;
-    }
-    .paragraph2{
-        font-family: "Satoshi";
-        font-size: 18px;
-        letter-spacing: -0.03em;
-        line-height: 1.5em;
-        color: var(--primary);
-        padding-right: 40px;
-        padding-bottom: 20px;
-    
+
+    .para {
+        font-size: 18px; 
     }
 }
-@media (min-width:500px) and (max-width: 850px){
-    .main{
-        margin-top: 4%;
-        display: inline-block;
-        margin-left: 5%;
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .our {
+        font-size: 140px; 
+        margin-left: 100px;
     }
-    .heading1{
-        font-family: "Clash Display", sans-serif;
-        font-weight: 300;
-        font-size: 50px;
-        letter-spacing: -0.03em;
-        line-height: 1.1em;
-        color: var(--purple);
+
+    .work {
+        font-size: 140px; 
+        margin-left: 180px; 
+        margin-top: -40px; 
     }
-    .paragraph1{
-        font-family: "Satoshi";
-        font-size: 24px;
-        letter-spacing: -0.03em;
-        line-height: 1.5em;
-        color: var(--primary);
-        padding-right: 40px;
-        padding-bottom: 20px;
+
+    .hd1 {
+        font-size: 60px; 
     }
-    .heading2{
-        font-family: "Clash Display", sans-serif;
-        font-size: 40px;
-        letter-spacing: -0.03em;
-        line-height: 1em;
-        color:var(--primary);
-        font-weight: 300;
+
+    .para {
+        font-size: 20px; 
     }
-    .paragraph2{
-        font-family: "Satoshi";
-        font-size: 24px;
-        letter-spacing: -0.03em;
-        line-height: 1.5em;
-        color: var(--primary);
-        padding-right: 40px;
-        padding-bottom: 20px;
-    
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1440px) {
+    .our {
+        font-size: 160px; 
+    }
+
+    .work {
+        font-size: 160px; 
+    }
+
+    .hd1 {
+        font-size: 70px; 
+    }
+
+    .para {
+        font-size: 22px; 
     }
 }

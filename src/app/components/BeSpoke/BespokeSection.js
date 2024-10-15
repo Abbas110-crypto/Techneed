@@ -24,13 +24,17 @@ const BespokeSection = () => {
 
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [imagePosition, setImagePosition] = useState({ x: 0, y: 0 }); // Added state for image position
 
     const handleMouseMove = (e) => {
         const rect = e.currentTarget.getBoundingClientRect();
+        const offsetX = 800;
+        const offsetY= 350;
         setMousePosition({
-            x: e.clientX - rect.left,
-            y: e.clientY - rect.top,
+            x: e.clientX - rect.left - offsetX,
+            y: e.clientY - rect.top - offsetY,
         });
+        setImagePosition({ x: e.clientX - rect.left - offsetX, y: e.clientY - rect.top }); // Update image position
     };
 
     return (
@@ -49,7 +53,11 @@ const BespokeSection = () => {
                         <div
                             className={styles.item}
                             onMouseEnter={() => setHoveredIndex(index)}
-                            onMouseLeave={() => setHoveredIndex(null)}
+                            onMouseLeave={() => {
+                                setHoveredIndex(null);
+                                setMousePosition({ x: 0, y: 0 }); // Reset mouse position
+                                setImagePosition({ x: 0, y: 0 }); // Reset image position
+                            }}
                             onMouseMove={handleMouseMove}
                         >
                             <div className={styles.itemContent}>
@@ -65,8 +73,9 @@ const BespokeSection = () => {
                                             alt={item.title}
                                             className={styles.hoverImage}
                                             style={{
-                                                left: `${mousePosition.x - 800}px`,
-                                                top: `${mousePosition.y - 120}px`,
+                                                left: `${imagePosition.x}px`, 
+                                                top: `${imagePosition.y}px`,
+                                                position: 'absolute', 
                                             }}
                                         />
                                     )}
