@@ -8,17 +8,17 @@ const BespokeSection = () => {
         {
             title: "Beauty",
             description: "Developing stunning one-of-a-kind digital design that catches people’s eyes and brings your brand to life online.",
-            imageUrl: "https://cdn.flames.design/project-media/d325afd6-7b26-4331-aa5c-3ab6fbacc706/original-bee63502-370f-4148-90fd-7e92dc07a0c0.jpg?aspect_ratio=4:3&width=900&height=600&quality=60",
+            imageUrl: "https://i.ibb.co/Br9rzFt/tech-removebg-preview.png",
         },
         {
             title: "Thought",
             description: "As a web design agency, we love to deliver meaningful and intuitive user experiences that build trust with your target audience.",
-            imageUrl: "https://cdn.flames.design/project-media/d325afd6-7b26-4331-aa5c-3ab6fbacc706/original-bee63502-370f-4148-90fd-7e92dc07a0c0.jpg?aspect_ratio=4:3&width=900&height=600&quality=60",
+            imageUrl: "https://i.ibb.co/Br9rzFt/tech-removebg-preview.png",
         },
         {
             title: "Impact",
             description: "Designing tailor-made solutions that resonate with your customers and drive them to act.",
-            imageUrl: "https://cdn.flames.design/project-media/d325afd6-7b26-4331-aa5c-3ab6fbacc706/original-bee63502-370f-4148-90fd-7e92dc07a0c0.jpg?aspect_ratio=4:3&width=900&height=600&quality=60",
+            imageUrl: "https://i.ibb.co/Br9rzFt/tech-removebg-preview.png",
         },
     ];
 
