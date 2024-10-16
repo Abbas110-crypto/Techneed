@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { Row, Col } from 'antd';
-import styles from './BespokeSection.module.css'; // Correct import for CSS Module
+import styles from './BespokeSection.module.css'; // Ensure this file is correctly set up
 
 const BespokeSection = () => {
     const items = [
@@ -24,17 +24,15 @@ const BespokeSection = () => {
 
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    const [imagePosition, setImagePosition] = useState({ x: 0, y: 0 }); // Added state for image position
 
     const handleMouseMove = (e) => {
         const rect = e.currentTarget.getBoundingClientRect();
-        const offsetX = 800;
-        const offsetY= 350;
+        const offsetX = rect.width / 2; // Center the image horizontally
+        const offsetY = rect.height / 2; // Center the image vertically
         setMousePosition({
             x: e.clientX - rect.left - offsetX,
             y: e.clientY - rect.top - offsetY,
         });
-        setImagePosition({ x: e.clientX - rect.left - offsetX, y: e.clientY - rect.top }); // Update image position
     };
 
     return (
@@ -53,12 +51,9 @@ const BespokeSection = () => {
                         <div
                             className={styles.item}
                             onMouseEnter={() => setHoveredIndex(index)}
-                            onMouseLeave={() => {
-                                setHoveredIndex(null);
-                                setMousePosition({ x: 0, y: 0 }); // Reset mouse position
-                                setImagePosition({ x: 0, y: 0 }); // Reset image position
-                            }}
+                            onMouseLeave={() => setHoveredIndex(null)}
                             onMouseMove={handleMouseMove}
+                            style={{ position: 'relative' }} // Set relative position for parent
                         >
                             <div className={styles.itemContent}>
                                 <div className={styles.itemTitleContainer}>
@@ -73,9 +68,11 @@ const BespokeSection = () => {
                                             alt={item.title}
                                             className={styles.hoverImage}
                                             style={{
-                                                left: `${imagePosition.x}px`, 
-                                                top: `${imagePosition.y}px`,
-                                                position: 'absolute', 
+                                                left: `${mousePosition.x}px`,
+                                                top: `${mousePosition.y}px`,
+                                                position: 'absolute',
+                                                transform: 'translate(-50%, -50%)', // Center image at mouse point
+                                                pointerEvents: 'none', // Prevent interference with mouse events
                                             }}
                                         />
                                     )}
