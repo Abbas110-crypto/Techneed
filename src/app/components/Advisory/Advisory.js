@@ -51,6 +51,10 @@ function Advisory() {
             </Card>
           </Col>
         </Row>
+        <Row gutter={24}>
+          <Col span={12}></Col>
+          <Col span={12}></Col>
+        </Row>
       </div>
     </div>
   );
