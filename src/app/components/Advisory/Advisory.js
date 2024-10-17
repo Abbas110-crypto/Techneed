@@ -51,9 +51,54 @@ function Advisory() {
             </Card>
           </Col>
         </Row>
+
+        {/* New Row for additional cards */}
         <Row gutter={24}>
-          <Col span={12}></Col>
-          <Col span={12}></Col>
+          <Col xs={24} sm={12} md={12} lg={12}>
+            <Card className={styles.card}>
+              <h5 className={styles.cardTitle}>
+                <span className={styles.titleLeft}>BrandX</span>
+              </h5>
+              <div className={styles.cardImageContainer}>
+                <img
+                  alt="BrandX Project"
+                  src="https://cdn.example.com/brandx-image.jpg"
+                  className={styles.cardImage}
+                />
+                <div className={styles.cardDescription}>
+                  <p>Elevating digital presence with a modern and interactive design approach.</p>
+                  <div className={styles.tagContainer}>
+                    <Tag color="volcano">Branding</Tag>
+                    <Tag color="geekblue">2022</Tag>
+                    <Tag color="green">Marketing</Tag>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </Col>
+
+          <Col xs={24} sm={12} md={12} lg={12}>
+            <Card className={styles.card}>
+              <h5 className={styles.cardTitle}>
+                <span className={styles.titleLeft}>TechFlow</span>
+              </h5>
+              <div className={styles.cardImageContainer}>
+                <img
+                  alt="TechFlow Project"
+                  src="https://cdn.example.com/techflow-image.jpg"
+                  className={styles.cardImage}
+                />
+                <div className={styles.cardDescription}>
+                  <p>Innovative solutions to streamline technology integration and efficiency.</p>
+                  <div className={styles.tagContainer}>
+                    <Tag color="purple">Technology</Tag>
+                    <Tag color="lime">2024</Tag>
+                    <Tag color="cyan">Development</Tag>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </Col>
         </Row>
       </div>
     </div>
