@@ -3,8 +3,8 @@
     margin-top: 5%;
     display: block;
     background-color: var(--primary);
+    width: 100%;
 }
-
 .leftSection {
     padding-top: 18%;
 }
@@ -30,7 +30,7 @@
     font-family: "Clash Display", sans-serif;
     color: var(--secondary);
     font-weight: 400;
-    font-size: 30px;
+    font-size: 50px;
     letter-spacing: -0.03em;
     line-height: 1.1em;
 }
@@ -111,65 +111,127 @@
 .card:hover .cardDescription {
     opacity: 1; 
 }
-
-@media (min-width: 768px) {
-    .our {
-        font-size: 120px; 
-        margin-left: 50px; 
-    }
-
-    .work {
-        font-size: 120px; 
-        margin-left: 50px; 
-        margin-top: -30px; 
+@media (max-width: 1200px) {
+    .our, .work {
+        font-size: 80px;
+        margin-left: 10px;
     }
 
     .hd1 {
-        font-size: 40px; 
+        font-size: 24px;
     }
 
     .para {
-        font-size: 18px; 
+        font-size: 14px;
+    }
+
+    .portfolioSection {
+        margin: 4%;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .cardTitle {
+        font-size: 20px;
+    }
+
+    .cardDescription {
+        font-size: 24px;
+    }
+
+    .ant-tag {
+        font-size: 12px;
     }
 }
 
-/* Desktop Styles */
-@media (min-width: 1024px) {
-    .our {
-        font-size: 140px; 
-        margin-left: 100px;
+@media (max-width: 768px) {
+    .leftSection {
+        padding-top: 10%;
     }
 
-    .work {
-        font-size: 140px; 
-        margin-left: 180px; 
-        margin-top: -40px; 
+    .our, .work {
+        font-size: 60px;
+        margin-left: 5px;
     }
 
     .hd1 {
-        font-size: 60px; 
+        font-size: 20px;
     }
 
     .para {
-        font-size: 20px; 
+        font-size: 12px;
+    }
+
+    .portfolioSection {
+        margin: 3%;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .cardTitle {
+        font-size: 18px;
+    }
+
+    .cardDescription {
+        font-size: 10px;
+    }
+
+    .ant-tag {
+        font-size: 10px;
     }
 }
-
-/* Large Desktop Styles */
-@media (min-width: 1440px) {
-    .our {
-        font-size: 160px; 
+@media (max-width: 480px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 100%; 
     }
 
-    .work {
-        font-size: 160px; 
+    .portfolioSection {
+        margin: 0;
+        padding: 0;
+        width: 100%; 
     }
 
-    .hd1 {
-        font-size: 70px; 
+    .card {
+        padding: 8px;
+        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .our, .work {
+        font-size: 40px;
+        margin: 0;
+        margin-top: 10px;
     }
 
     .para {
-        font-size: 22px; 
+        font-size: 10px;
+        padding: 0 5px;
+    }
+
+    .sentenceSection {
+        order: 1; 
+    }
+
+    .our, .work {
+        order: 2; 
+    }
+
+    .cardTitle {
+        font-size: 16px;
+    }
+
+    .cardDescription {
+        font-size: 18px;
+    }
+
+    .ant-tag {
+        font-size: 8px;
     }
 }

@@ -3,6 +3,32 @@ import React from 'react';
 import { Row, Col, Card, Tag } from 'antd'; // Import Tag from Ant Design
 import styles from '../Advisory/Advisory.module.css';
 
+// Array for the big card
+const bigCardData = [
+  {
+    title: 'Floan',
+    imageUrl: 'https://cdn.prod.website-files.com/6253f6e60f27498e7d4a1e46/627abab0baed6035bacf1756_How-to-build-the-perfect-full-stack-web-dev-portfolio-1.jpeg',
+    description: 'Discover the secrets of building a perfect website for businesses.',
+    tags: ['Web Development', '2023', 'UI/UX Design'],
+  },
+];
+
+// Array for smaller cards
+const cardData = [
+  {
+    title: 'BrandX',
+    imageUrl: 'https://cdn.prod.website-files.com/6253f6e60f27498e7d4a1e46/627abab0baed6035bacf1756_How-to-build-the-perfect-full-stack-web-dev-portfolio-1.jpeg',
+    description: 'Elevating digital presence with a modern and interactive design approach.',
+    tags: ['Branding', '2022', 'Marketing'],
+  },
+  {
+    title: 'TechFlow',
+    imageUrl: 'https://cdn.prod.website-files.com/6253f6e60f27498e7d4a1e46/627abab0baed6035bacf1756_How-to-build-the-perfect-full-stack-web-dev-portfolio-1.jpeg',
+    description: 'Innovative solutions to streamline technology integration and efficiency.',
+    tags: ['Technology', '2024', 'Development'],
+  },
+];
+
 function Advisory() {
   return (
     <div className={styles.main}>
@@ -25,80 +51,60 @@ function Advisory() {
           </Col>
         </Row>
       </div>
-
+{/* big cards */}
       <div className={styles.portfolioSection}>
         <Row gutter={24}>
-          <Col xs={24} sm={24} md={24} lg={24}>
-            <Card className={styles.card}>
-              <h5 className={styles.cardTitle}>
-                <span className={styles.titleLeft}>Floan</span>
-              </h5>
-              <div className={styles.cardImageContainer}>
-                <img
-                  alt="Web Development Portfolio"
-                  src="https://cdn.prod.website-files.com/6253f6e60f27498e7d4a1e46/627abab0baed6035bacf1756_How-to-build-the-perfect-full-stack-web-dev-portfolio-1.jpeg"
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardDescription}>
-                  <p>Discover the secrets of building a perfect website for businesses.</p>
-                  <div className={styles.tagContainer}>
-                    <Tag color="magenta">Web Development</Tag>
-                    <Tag color="gold">2023</Tag>
-                    <Tag color="blue">UI/UX Design</Tag>
+          {bigCardData.map((card, index) => (
+            <Col key={index} xs={24} sm={24} md={24} lg={24}>
+              <Card className={styles.card}>
+                <h5 className={styles.cardTitle}>
+                  <span className={styles.titleLeft}>{card.title}</span>
+                </h5>
+                <div className={styles.cardImageContainer}>
+                  <img
+                    alt={card.title}
+                    src={card.imageUrl}
+                    className={styles.cardImage}
+                  />
+                  <div className={styles.cardDescription}>
+                    <p>{card.description}</p>
+                    <div className={styles.tagContainer}>
+                      {card.tags.map((tag, tagIndex) => (
+                        <Tag key={tagIndex} color="magenta">{tag}</Tag>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Card>
-          </Col>
+              </Card>
+            </Col>
+          ))}
         </Row>
-
-        {/* New Row for additional cards */}
+{/* small cards  */}
         <Row gutter={24}>
-          <Col xs={24} sm={12} md={12} lg={12}>
-            <Card className={styles.card}>
-              <h5 className={styles.cardTitle}>
-                <span className={styles.titleLeft}>BrandX</span>
-              </h5>
-              <div className={styles.cardImageContainer}>
-                <img
-                  alt="BrandX Project"
-                  src="https://cdn.example.com/brandx-image.jpg"
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardDescription}>
-                  <p>Elevating digital presence with a modern and interactive design approach.</p>
-                  <div className={styles.tagContainer}>
-                    <Tag color="volcano">Branding</Tag>
-                    <Tag color="geekblue">2022</Tag>
-                    <Tag color="green">Marketing</Tag>
+          {cardData.map((card, index) => (
+            <Col key={index} xs={24} sm={12} md={12} lg={12}>
+              <Card className={styles.card}>
+                <h5 className={styles.cardTitle}>
+                  <span className={styles.titleLeft}>{card.title}</span>
+                </h5>
+                <div className={styles.cardImageContainer}>
+                  <img
+                    alt={card.title}
+                    src={card.imageUrl}
+                    className={styles.cardImage}
+                  />
+                  <div className={styles.cardDescription}>
+                    <p>{card.description}</p>
+                    <div className={styles.tagContainer}>
+                      {card.tags.map((tag, tagIndex) => (
+                        <Tag key={tagIndex} color="volcano">{tag}</Tag>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Card>
-          </Col>
-
-          <Col xs={24} sm={12} md={12} lg={12}>
-            <Card className={styles.card}>
-              <h5 className={styles.cardTitle}>
-                <span className={styles.titleLeft}>TechFlow</span>
-              </h5>
-              <div className={styles.cardImageContainer}>
-                <img
-                  alt="TechFlow Project"
-                  src="https://cdn.example.com/techflow-image.jpg"
-                  className={styles.cardImage}
-                />
-                <div className={styles.cardDescription}>
-                  <p>Innovative solutions to streamline technology integration and efficiency.</p>
-                  <div className={styles.tagContainer}>
-                    <Tag color="purple">Technology</Tag>
-                    <Tag color="lime">2024</Tag>
-                    <Tag color="cyan">Development</Tag>
-                  </div>
-                </div>
-              </div>
-            </Card>
-          </Col>
+              </Card>
+            </Col>
+          ))}
         </Row>
       </div>
     </div>

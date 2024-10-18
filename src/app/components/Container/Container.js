@@ -52,11 +52,11 @@ function Container() {
                     key={index}
                     ref={(el) => (containerRefs.current[index] = el)}
                     data-aos="zoom-out"
-                    data-aos-anchor-placement="bottom-bottom"
+                    data-aos-anchor-placement="top-bottom"
                     data-aos-duration="2000" 
                 >
                     <Row justify={'center'}>
-                        <Col xs={24} sm={24} md={14} lg={14} xl={14}>
+                        <Col xs={24} sm={24} md={24} lg={24} xl={14}>
                             <div className={styles.container1}>
                                 <h1 className={styles.h1}>{service.title}</h1>
                                 <div>
